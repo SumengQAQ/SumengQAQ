@@ -38,6 +38,10 @@ flowchart TB
         R[Router]
     end
 
+    subgraph middleware["中间层"]
+        IDEM["幂等过滤器<br/>幂等键 / 结果缓存"]
+    end
+
     subgraph application["应用层"]
         C[CommandService]
         Q[QueryService]
@@ -57,8 +61,9 @@ flowchart TB
         OLAP[("OLAP")]
     end
 
-    R --> C
-    R --> Q
+    R -->|命令| IDEM
+    R -->|查询| Q
+    IDEM --> C
     C --> AR
     C --> DS
     C --> REPO
