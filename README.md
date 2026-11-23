@@ -26,6 +26,34 @@ stateDiagram-v2
     死信 --> [*]
 ```
 
+## 写规约
+
+```tla
+\* 钱不会凭空出现，也不会凭空消失
+ResourceConservation ≜
+    cost + SumAvailable(v_nodes) + SumFrozen(v_nodes)
+        = Cardinality(v_nodes) * 2
+```
+
+```tla
+\* 失败那步允许抢跑：Cancel 到达时还没 Try 过就是空回滚
+ResponseCancel(node) ≜
+    ∧ Cancel ∈ inbox[node]
+    ∧ state[node] ∈ {Null, Try}
+    ∧ state' = [state EXCEPT ![node] = Cancel]
+```
+
+## 写领域模型
+
+```python
+class Account(AggregateRoot):
+    def withdraw(self, amount: Decimal) -> None:
+        if self.balance < amount:
+            raise InsufficientBalance
+        self.balance -= amount
+        self.push_event(BalanceWithdrawn(amount))
+```
+
 ## 技术栈
 
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
