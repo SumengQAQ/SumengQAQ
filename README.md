@@ -1,6 +1,23 @@
-# SumengQAQ
+<h2>Hi, I'm Sumeng <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3YTAzcmQ3bmJyMmttcHZwaWY5bHp6bG45emp6Nmx1azRhdnR3dGJ4bSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/Sd9XrDFZZ0Q0OXAdJM/giphy.gif" width="50"></h2>
 
-大二在读，自学后端。关注领域驱动设计、分布式事务与形式化验证。
+<img align="right" src="./images/avatar.svg" width="230">
+
+<p><em>大二在读，自学后端<br/>
+关注领域驱动设计、分布式事务和形式化验证</em></p>
+[![GitHub followers](https://img.shields.io/github/followers/SumengQAQ?label=follow&style=social)](https://github.com/SumengQAQ)
+[![知乎](https://img.shields.io/badge/-知乎-0084FF?style=flat-square&logo=zhihu&logoColor=white)](https://www.zhihu.com/people/64-69-50-2-10)
+
+### <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3OWZveWJuc2Qwc2JvMmFoaTIzcWRjbWQyNTZzbjFpMm5qdDh3MWRyciZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/14lptDc1NC6a5d4bs6/giphy.gif" width="50"> 一点关于我
+
+```go
+sumeng := Profile{
+    Languages: []string{"Go", "Python", "TLA+"},
+    Learning:  []string{"领域驱动设计", "分布式", "系统规约"},
+    Projects:  []string{"light-mq", "backend-architecture-notes"},
+    Focus:     "后端 / 架构",
+    NotGoodAt: "算法 / 八股",
+}
+```
 
 ## 方向
 
@@ -10,79 +27,14 @@
 | 领域驱动设计   | 事件风暴、聚合边界、限界上下文、工作单元、实体、值对象、聚合根 |
 | 数据密集型应用 | 脏写、写偏斜、隔离级别、幂等、分布式共识                       |
 
-## 消息组状态机
-
-```mermaid
-stateDiagram-v2
-    direction LR
-    [*] --> Pending: 写入
-    Pending --> Processing: 收齐，分发
-    Processing --> Success: 成功
-    Processing --> Failed: 失败 / 超时
-    Processing --> Dead: 重试超限
-    Failed --> Processing: 重新分发
-    Success --> [*]
-    Dead --> [*]
-```
-
-## 分层
-
-```mermaid
----
-config:
-  flowchart:
-    curve: basis
----
-flowchart TB
-    subgraph iface["接口层"]
-        R[Router]
-    end
-
-    subgraph middleware["中间层"]
-        IDEM["幂等过滤器<br/>幂等键 / 结果缓存"]
-    end
-
-    subgraph application["应用层"]
-        C[CommandService]
-        Q[QueryService]
-    end
-
-    subgraph domain["领域层"]
-        AR[AggregateRoot]
-        DS[DomainService]
-        EV[DomainEvent]
-    end
-
-    subgraph infrastructure["基础设施层"]
-        REPO[Repository]
-        UOW[UnitOfWork]
-        MQ[MessageQueue]
-        RM[("ReadModel")]
-        OLAP[("OLAP")]
-    end
-
-    R -->|命令| IDEM
-    R -->|查询| Q
-    IDEM --> C
-    C --> AR
-    C --> DS
-    C --> REPO
-    C --> UOW
-    AR --> EV
-    EV --> MQ
-    MQ -.->|异步投影| RM
-    Q --> RM
-    Q --> OLAP
-```
-
 ## 技术栈
 
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)
-![TLA+](https://img.shields.io/badge/TLA%2B-2C3E50?style=flat)
+
+
+![Opencode](https://img.shields.io/badge/Opencode-000000?style=flat&logo=opencode)	![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)	![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)	![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)	![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)	![TLA+](https://img.shields.io/badge/TLA+-9370DB?style=flat)
+
+
 
 ## 项目
 
-[![backend-architecture-notes](https://github-readme-stats.vercel.app/api/pin/?username=SumengQAQ&repo=backend-architecture-notes&theme=tokyonight)](https://github.com/SumengQAQ/backend-architecture-notes)
+[![backend-architecture-notes](https://github-readme-stats.vercel.app/api/pin/?username=SumengQAQ&repo=backend-architecture-notes&bg_color=2E3440&title_color=88C0D0&text_color=D8DEE9&icon_color=8FBCBB&hide_border=true)](https://github.com/SumengQAQ/backend-architecture-notes)
