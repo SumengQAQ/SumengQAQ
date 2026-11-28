@@ -1,9 +1,10 @@
 <h2>Hi, I'm Sumeng <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3YTAzcmQ3bmJyMmttcHZwaWY5bHp6bG45emp6Nmx1azRhdnR3dGJ4bSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/Sd9XrDFZZ0Q0OXAdJM/giphy.gif" width="50"></h2>
 
-<img align="right" src="./images/avatar.svg" width="230">
+<img align="right" src="https://images.weserv.nl/?url=raw.githubusercontent.com/SumengQAQ/SumengQAQ/main/images/actor.jpg&mask=circle&w=230&h=230&fit=cover" width="230">
 
 <p><em>大二在读，自学后端<br/>
 关注领域驱动设计、分布式事务和形式化验证</em></p>
+
 [![GitHub followers](https://img.shields.io/github/followers/SumengQAQ?label=follow&style=social)](https://github.com/SumengQAQ)
 [![知乎](https://img.shields.io/badge/-知乎-0084FF?style=flat-square&logo=zhihu&logoColor=white)](https://www.zhihu.com/people/64-69-50-2-10)
 
