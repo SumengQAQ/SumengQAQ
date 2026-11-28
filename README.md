@@ -6,7 +6,7 @@
 [![GitHub followers](https://img.shields.io/github/followers/SumengQAQ?label=follow&style=social)](https://github.com/SumengQAQ)
 [![知乎](https://img.shields.io/badge/-知乎-0084FF?style=flat-square&logo=zhihu&logoColor=white)](https://www.zhihu.com/people/64-69-50-2-10)
 
-### <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3OWZveWJuc2Qwc2JvMmFoaTIzcWRjbWQyNTZzbjFpMm5qdDh3MWRyciZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/14lptDc1NC6a5d4bs6/giphy.gif" width="50"> 一点关于我
+### 一点关于我<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3OWZveWJuc2Qwc2JvMmFoaTIzcWRjbWQyNTZzbjFpMm5qdDh3MWRyciZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/14lptDc1NC6a5d4bs6/giphy.gif" width="50">
 
 ```go
 sumeng := Profile{
@@ -17,10 +17,6 @@ sumeng := Profile{
     NotGoodAt: "算法 / 八股",
 }
 ```
-
-## 技能
-
-<img src="./images/skills.svg" width="540">
 
 ## 方向
 
