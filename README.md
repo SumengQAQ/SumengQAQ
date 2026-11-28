@@ -1,6 +1,4 @@
-<h2>Hi, I'm Sumeng <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3YTAzcmQ3bmJyMmttcHZwaWY5bHp6bG45emp6Nmx1azRhdnR3dGJ4bSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/Sd9XrDFZZ0Q0OXAdJM/giphy.gif" width="50"></h2>
-
-<img align="right" src="https://images.weserv.nl/?url=raw.githubusercontent.com/SumengQAQ/SumengQAQ/main/images/actor.jpg&mask=circle&w=230&h=230&fit=cover" width="230">
+<h2>𝙃𝙞, 𝙄’𝙢 𝙎𝙪𝙢𝙚𝙣𝙜 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3YTAzcmQ3bmJyMmttcHZwaWY5bHp6bG45emp6Nmx1azRhdnR3dGJ4bSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/Sd9XrDFZZ0Q0OXAdJM/giphy.gif" width="50"></h2>
 
 <p><em>大二在读，自学后端<br/>
 关注领域驱动设计、分布式事务和形式化验证</em></p>
@@ -19,6 +17,10 @@ sumeng := Profile{
     NotGoodAt: "算法 / 八股",
 }
 ```
+
+## 技能
+
+<img src="./images/skills.svg" width="540">
 
 ## 方向
 
